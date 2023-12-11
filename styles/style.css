@@ -1,0 +1,71 @@
+button {
+    background-color: orange;
+    border: 1px solid black;
+}
+
+button:hover {
+    transform: scale(1.1);
+}
+
+table {
+    width: 40%;
+    margin: 20px;
+    border-collapse: collapse;
+    
+}
+
+th, td {
+    border: 2px solid black;
+    padding: 10px;
+}
+
+th {
+    background-color: aqua;
+}
+
+.input {
+    width: 10%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.thirdInput {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+tr.selected {
+    background-color: gray;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    margin-left: 20px;
+}
+
+.cont1 {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+#signOut {
+    background-color: red;
+}
+.filter {
+    display: flex;
+    margin-left: 280px;
+}
+
+label {
+    padding-right: 15px;
+}
+
+#editTask {
+    display: none;
+}
