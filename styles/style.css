@@ -1,27 +1,22 @@
-button {
-    background-color: orange;
-    border: 1px solid black;
-}
-
-button:hover {
-    transform: scale(1.1);
+html {
+    background-color: #847979;
 }
 
 table {
-    width: 40%;
-    margin: 20px;
+    width: 90%; /* Increase the width to 60% */
+    margin: 20px; /* Auto margin to center the table */
     border-collapse: collapse;
-    
 }
 
 th, td {
     border: 2px solid black;
-    padding: 10px;
+    padding: 15px; /* Increase the padding for better spacing */
 }
 
 th {
-    background-color: aqua;
-}
+    background-color: rgb(0, 255, 4);
+    color: #101010;
+}   
 
 .input {
     width: 10%;
@@ -44,8 +39,89 @@ tr.selected {
 .buttons {
     display: flex;
     flex-direction: column;
-    gap: 50px;
+    gap: 20px; /* Reduce the gap for better spacing */
+}
+
+.buttons #delete {
     margin-left: 20px;
+    background-color: red;
+    border: none;
+    width: 20%;
+    height: 40px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    font-size: 16px;
+    font-weight: 800;
+    color: #f9f9f9;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+}
+
+.buttons #markAsComplete {
+    margin-left: 20px;
+    background-color: greenyellow;
+    border: none;
+    width: 20%;
+    height: 40px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    font-size: 16px;
+    font-weight: 800;
+    color: #000000;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+}
+
+.buttons1 {
+    display: flex;
+    flex-direction: row;
+}
+
+#saveButton, #editTask {
+    margin-left: 10px;
+    background-color: greenyellow;
+    border: none;
+    width: 5%;
+    height: 20px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    font-size: 16px;
+    font-weight: 800;
+    color: #ffffff;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+}
+
+.bodyMain {
+    background-color: #a4c5e3;
+    padding: 10px;
+    width: 1000px;
+    margin: 30px auto;
+    border: 3px solid orange;
+    border-radius: 3%;
+}
+
+/* Add hover effect */
+.buttons button:hover {
+    background-color: #ff1c51;
 }
 
 .cont1 {
@@ -54,18 +130,138 @@ tr.selected {
     gap: 20px;
 }
 
-#signOut {
+#delete {
     background-color: red;
 }
-.filter {
+
+#signOut {
+    padding: 10px;
+    background-color: red;
+    border: none;
+    height: 40px;
+    cursor: pointer;
     display: flex;
-    margin-left: 280px;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    font-weight: 800;
+    color: #f9f9f9;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+}
+
+#signOut:hover {
+    background-color: #ff1c51;
 }
 
 label {
     padding-right: 15px;
 }
 
+#taskTable {
+    position: relative;
+}
+
+.filter {
+    top: 0;
+    right: 0;
+    margin: 20px;
+}
+
+#signOut {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+#saveButton {
+    background-color: #ffaa00;
+}
+
 #editTask {
     display: none;
+    background-color: #00aaf9;
+}
+
+#markAsComplete {
+    background-color: greenyellow;
+}
+
+.signUpPage, .signInPage {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    border: 3px solid orange;
+    padding: 20px;
+    background-color: #a4c5e3;
+    font-family: 'Verdana', Geneva, Tahoma, sans-serif;
+    border-radius: 10%;
+    align-items: center;
+}
+
+.signUpButton, .signInButton {
+    display: flex;
+    font-size: 1em;
+    width: 80%;
+    height: 40px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    margin: auto;
+    background-color: greenyellow;
+    transition: all 1s ease;
+    border: none;
+}
+
+.signUpButton:hover, .signInButton:hover {
+    transform: scale(1.2);
+    background-color: rgb(28, 203, 22);
+}
+
+
+.signUpBody, .signInBody {
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+
+.signUpPage label, .signInPage label {
+    color: #000000;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.signUpPage input, .signInPage input {
+    margin-bottom: 20px;
+    margin-top: 10px;
+    width: 100%;
+    padding: 10px; 
+    border: 2px solid #ffaa00;
+    background: #333; 
+    color: #ffffff;
+    font-size: 18px; 
+}
+
+.input input {
+    margin-bottom: 20px;
+    margin-top: 10px;
+    width: 200%;
+    padding: 5px; 
+    border: 2px solid #ffaa00;
+    background: #333; 
+    color: #ffffff;
+    font-size: 18px; 
+}
+
+.input label {
+    color: #000000;
+    font-size: 16px;
+    margin-bottom: 10px;
 }

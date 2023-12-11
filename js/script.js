@@ -46,7 +46,7 @@ function signUp() {
     const password = document.getElementById('password').value;
 
     if (!username || !password) {
-        displayMessage('Please provide both username and password.', 'signupMessage');
+        alert('Please provide both username and password!')
         return;
     }
 

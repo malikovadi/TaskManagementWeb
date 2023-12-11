@@ -9,53 +9,55 @@
     <script src="js/script.js"></script>
 </head>
 <body>
-    <h1>Task Management:</h1>
-    <div class="input">
-        <div class="firstInput">
-            <label for="title">Title:</label>
-            <input type="text" id="title">
+    <div class="bodyMain">
+            <h1>Task Management:</h1>
+        <div class="input">
+            <div class="firstInput">
+                <input type="text" id="title" required placeholder="Title">
+            </div>
+            <div class="secondInput">
+                <input type="text" id="description" required placeholder="Description">
+            </div>
+            <div class="thirdInput">
+                <label for="deadline">Deadline:</label>
+                <input type="date" id="deadline">
+            </div>
         </div>
-        <div class="secondInput">
-            <label for="description">Description: </label>
-            <input type="text" id="description">
+        <div class="buttons1">
+            <button id = "saveButton" onclick="saveTask()">Save</button>
+            <button id="editTask" onclick="editTask()">Edit</button>
         </div>
-        <div class="thirdInput">
-            <label for="deadline">Deadline:</label>
-            <input type="date" id="deadline">
-        </div>
-    </div>
-    <button id = "saveButton" onclick="saveTask()">Save</button>
-    <button id="editTask" onclick="editTask()">Edit</button>
-    <div class="filter">
-        <input type="radio" name="taskFilter" id="allTasks" value="all" checked>
-        <label for="allTasks">All Tasks</label>
+        
+        <div class="filter">
+            <input type="radio" name="taskFilter" id="allTasks" value="all" checked>
+            <label for="allTasks">All Tasks</label>
 
-        <input type="radio" name="taskFilter" id="completedTasks" value="completed">
-        <label for="completedTasks">Completed Tasks</label>
+            <input type="radio" name="taskFilter" id="completedTasks" value="completed">
+            <label for="completedTasks">Completed Tasks</label>
 
-        <input type="radio" name="taskFilter" id="activeTasks" value="active">
-        <label for="activeTasks">Active Tasks</label>
-    </div>
-    <table id="taskTable">
-        <thead>
-            <tr>
-                <th>Title</th>
-                <th>Description</th>
-                <th>Deadline</th>
-                <th>Status</th>
-            </tr>
-        </thead>
-        <tbody id="taskTableBody"></tbody>
-    </table>
-    <div class="buttons">
-        <div class="cont1">
-            <button id = "delete" onclick = "deleteTask()" style = "display: none;">Delete</button>
-            <button id = "markAsComplete" onclick="complete()" id="markAsComplete" style="display: none;">Mark as complete</button>
+            <input type="radio" name="taskFilter" id="activeTasks" value="active">
+            <label for="activeTasks">Active Tasks</label>
         </div>
-        <div class="cont2">
-            <button id = "signOut" onclick="signOut()">Sign Out</button>
+        <table id="taskTable">
+            <thead>
+                <tr>
+                    <th>Title</th>
+                    <th>Description</th>
+                    <th>Deadline</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody id="taskTableBody"></tbody>
+        </table>
+        <div class="buttons">
+            <div class="cont1">
+                <button id = "delete" onclick = "deleteTask()" style = "display: none;">Delete</button>
+                <button id = "markAsComplete" onclick="complete()" id="markAsComplete" style="display: none;">Mark as complete</button>
+            </div>
+            <div class="cont2">
+                <button id = "signOut" onclick="signOut()">Sign Out</button>
+            </div>
         </div>
     </div>
-    
 </body>
 </html>
